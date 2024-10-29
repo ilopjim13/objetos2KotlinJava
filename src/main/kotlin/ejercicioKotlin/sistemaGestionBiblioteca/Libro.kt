@@ -1,4 +1,4 @@
 package org.example.ejercicioKotlin.sistemaGestionBiblioteca
 
-class Libro {
+data class Libro(val nombre:String, var prestado:Boolean = false) {
 }

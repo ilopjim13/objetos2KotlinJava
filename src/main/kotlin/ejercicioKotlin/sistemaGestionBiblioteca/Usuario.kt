@@ -1,4 +1,4 @@
 package org.example.ejercicioKotlin.sistemaGestionBiblioteca
 
-class Usuario {
+data class Usuario(val nombre:String, var libro :Libro? = null) {
 }
