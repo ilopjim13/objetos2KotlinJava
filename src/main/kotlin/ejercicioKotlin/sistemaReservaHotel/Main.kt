@@ -1,4 +1,4 @@
-package org.example.sistemaReservaHotel
+package org.example.ejercicioKotlin.sistemaReservaHotel
 
 fun main() {
 
@@ -6,8 +6,6 @@ fun main() {
     val habitacion2 = Habitacion(2)
     val habitacion3 = Habitacion(3)
     val habitacion4 = Habitacion(4)
-    val habitacion5 = Habitacion(5)
-    val habitacion6 = Habitacion(6)
 
     val pepe = Cliente("Pepe")
     val jose = Cliente("Jose")

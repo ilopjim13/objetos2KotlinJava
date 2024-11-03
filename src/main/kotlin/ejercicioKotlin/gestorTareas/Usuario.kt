@@ -1,24 +1,38 @@
 package org.example.ejercicioKotlin.gestorTareas
 
-class Usuario(val nombre:String, val tareas:MutableList<Tarea>) {
+class Usuario {
 
-    fun crearProyecto() {
+    var proyecto: Proyecto? = null
+
+    fun crearProyecto(nombre:String):Boolean {
+        if (proyecto == null) {
+            proyecto = Proyecto(nombre, mutableListOf())
+            return true
+        }
+        return false
         
     }
 
 
     fun agregarTarea(tarea: Tarea):Boolean {
-        if (tarea !in tareas) {
-            tareas.add(tarea)
-            return true
+        if (proyecto != null) {
+            if (tarea !in proyecto!!.tareas) {
+                proyecto!!.tareas.add(tarea)
+                return true
+            }
         }
+
         return false
     }
 
 
-    fun marcarTarea(tarea:Tarea) {
-        if (tarea in tareas) {
-            tareas.map { if (tarea == it) it.completada = true }
+    fun marcarTarea(tarea:Tarea):Boolean {
+        if (proyecto != null) {
+            if (tarea in proyecto!!.tareas) {
+                proyecto!!.tareas.map { if (tarea == it) it.completada = true }
+                return true
+            }
         }
+       return false
     }
 }

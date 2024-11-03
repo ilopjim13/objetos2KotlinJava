@@ -1,4 +1,4 @@
 package org.example.ejercicioKotlin.gestorTareas
 
-class Proyecto {
+data class Proyecto(val nombre:String, val tareas:MutableList<Tarea>) {
 }

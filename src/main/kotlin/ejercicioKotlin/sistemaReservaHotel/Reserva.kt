@@ -1,4 +1,4 @@
-package org.example.sistemaReservaHotel
+package org.example.ejercicioKotlin.sistemaReservaHotel
 
 data class Reserva(val cliente: Cliente?,  val habitacion: Habitacion?) {
 

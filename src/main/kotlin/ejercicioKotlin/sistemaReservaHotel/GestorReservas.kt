@@ -1,4 +1,4 @@
-package org.example.sistemaReservaHotel
+package org.example.ejercicioKotlin.sistemaReservaHotel
 
 class GestorReservas {
 
